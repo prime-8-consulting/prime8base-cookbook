@@ -1,42 +1,36 @@
-# .-cookbook
+# prime8base-cookbook
 
-TODO: Enter the cookbook description here.
+This cookbook is to configure the base instance for prime 8 consulting's applications.
+The ubuntu build includes meteor-angular and dependencies as well as a few packages 
+useful for system administration.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+ubuntu 14.04, windows 2012
 
 ## Attributes
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['.']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
-
 ## Usage
 
-### .::default
+### prime8base::default
 
-Include `.` in your node's `run_list`:
+Include `prime8base` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[.::default]"
+    "recipe[prime8base::default]"
   ]
 }
 ```
+## Set Up
+Kitchen is the test suite for Chef, and in this cookbook we're using the kitchen-docker driver.
+Benefits of kitchen-docker include speed and platform independence. After pulling the repo, you 
+must have the chef-dk installed and run `bundle install`. 
+
+Add your user to the docker group with `sudo adduser yourusername docker` to enable the docker
+daemon to run. 
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Ele Mooney (<ellenm@prime8consulting.com>)

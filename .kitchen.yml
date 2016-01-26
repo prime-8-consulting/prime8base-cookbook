@@ -1,13 +1,13 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  use_sudo: false
 
 provisioner:
   name: chef_zero
 
 platforms:
   - name: ubuntu-14.04
-  - name: windows
  
 suites:
   - name: default
@@ -15,15 +15,8 @@ suites:
       - recipe[prime8base::default]
     attributes:
 
-  - name: ubuntu-local
+  - name: ubuntu-docker
     run_list:
      - recipe[prime8base::ubuntu]
     attributes:
 
-  - name: ubuntu-ec2
-    driver: 
-      name: ec2
-    run_list:
-      -recipe[prime8base]
-    attributes:
-     
