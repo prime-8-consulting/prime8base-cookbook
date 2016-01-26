@@ -3,14 +3,27 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
 
 platforms:
   - name: ubuntu-14.04
-  - name: centos-7.1
-
+  - name: windows
+ 
 suites:
   - name: default
     run_list:
-      - recipe[.::default]
+      - recipe[prime8base::default]
     attributes:
+
+  - name: ubuntu-local
+    run_list:
+     - recipe[prime8base::ubuntu]
+    attributes:
+
+  - name: ubuntu-ec2
+    driver: 
+      name: ec2
+    run_list:
+      -recipe[prime8base]
+    attributes:
+     
