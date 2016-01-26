@@ -1,4 +1,15 @@
 # recipe to  = configure ubuntu with meteor
 # for prime 8 consulting dev
 
-dev_packages = 
+prime_packages = [
+	'wget',
+	'git',
+	'vim',
+	'tmux',
+	'jq',
+	'tig',
+	'htop',
+	'curl'
+]
+
+package prime_packages 
