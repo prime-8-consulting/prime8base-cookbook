@@ -23,7 +23,7 @@ Include `prime8base` in your node's `run_list`:
   ]
 }
 ```
-## Set Up
+## Development Set Up
 Kitchen is the test suite for Chef, and in this cookbook we're using the kitchen-docker driver.
 Benefits of kitchen-docker include speed and platform independence. After pulling the repo, you 
 must have the chef-dk installed and run `bundle install`. 

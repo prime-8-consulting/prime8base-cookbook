@@ -2,6 +2,7 @@
 driver:
   name: docker
   use_sudo: false
+  socket: unix:///var/run/docker.sock
 
 provisioner:
   name: chef_zero

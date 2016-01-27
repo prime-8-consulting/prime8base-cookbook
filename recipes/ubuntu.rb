@@ -7,9 +7,11 @@ prime_packages = [
 	'vim',
 	'tmux',
 	'jq',
-	'tig',
 	'htop',
-	'curl'
+	'curl',
+        'graphicsmagick'
 ]
 
 package prime_packages 
+
+include_recipe 'meteor'
