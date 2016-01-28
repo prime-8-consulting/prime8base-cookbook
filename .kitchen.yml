@@ -3,6 +3,8 @@ driver:
   name: docker
   use_sudo: false
   socket: unix:///var/run/docker.sock
+  driver_config: 
+    ssh_timeout: 15
 
 provisioner:
   name: chef_zero
