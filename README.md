@@ -31,6 +31,8 @@ must have the chef-dk installed and run `bundle install`.
 Add your user to the docker group with `sudo adduser yourusername docker` to enable the docker
 daemon to run. 
 
+To authenticate with AWS with shared credentials ini file at ~/.aws/credentials. You can specify multiple profiles in this file and select one with the AWS_PROFILE environment variable or the shared_credentials_profile driver config. Read this for more information 
+
 ## License and Authors
 
 Author:: Ele Mooney (<ellenm@prime8consulting.com>)

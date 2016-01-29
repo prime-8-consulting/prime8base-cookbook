@@ -2,16 +2,20 @@
 # for prime 8 consulting dev
 
 prime_packages = [
-	'wget',
+ 	'wget',
 	'git',
 	'vim',
 	'tmux',
 	'jq',
 	'htop',
-	'curl',
-        'graphicsmagick'
+  'graphicsmagick'
 ]
 
 package prime_packages 
 
 include_recipe 'meteor'
+
+bash 'fix meteor permissions' do 
+  code 'sudo chown ubuntu:ubuntu /home/ubuntu/.meteor'
+end  
+
