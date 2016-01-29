@@ -18,19 +18,19 @@ suites:
       - recipe[prime8base::default]
     attributes:
 
-  - name: ubulocal
+  - name: ubu-docker
     run_list:
      - recipe[prime8base::ubuntu]
     attributes:
 
-  - name: ubuec2
+  - name: ubu-ec2
     run_list: 
       - recipe[prime8base::ubuntu]
     driver:
       name: ec2
       region: <%= ENV['AWS_REGION'] %>
       aws_ssh_key_id: <%= ENV['AWS_SSH_KEY'] %>
-      instance_type: 
+      instance_type: t2.micro 
       subnet_id: <%= ENV['SUBNET_ID'] %>
       security_group_ids: [ <%= ENV['SECURITY_GROUP_ID'] %> ]
       image_id: <%= ENV['AMI_ID'] %>
