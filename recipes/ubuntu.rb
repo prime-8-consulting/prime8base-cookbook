@@ -6,12 +6,15 @@ prime_packages = [
 	'git',
 	'vim',
 	'tmux',
+  'curl',
 	'jq',
 	'htop',
   'graphicsmagick'
 ]
 
-package prime_packages 
+package prime_packages do
+  ignore_failure true
+end
 
 include_recipe 'meteor'
 
