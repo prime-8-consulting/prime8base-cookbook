@@ -18,7 +18,4 @@ end
 
 include_recipe 'meteor'
 
-bash 'fix meteor permissions' do 
-  code 'sudo chown ubuntu:ubuntu /home/ubuntu/.meteor'
-end  
 
