@@ -23,16 +23,12 @@ describe 'prime8base::ubuntu' do
     end
   end
 
-  describe user('meteor')
+  describe user('meteor') do
     it { should exist }
   end
 
-  describe command('sudo -u meteor whoami')
+  describe command('sudo -u meteor whoami') do
     its(:stdout) { should match /meteor/ }
   end
  
-  describe command('sudo -u meteor meteor')
-    its(:stdout) { should match /Welcome/ }
-  end
-
 end

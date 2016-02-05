@@ -8,7 +8,7 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-15.10
     driver_config: 
       username: ubuntu
  
@@ -29,12 +29,14 @@ suites:
     driver:
       name: ec2
       region: <%= ENV['AWS_REGION'] %>
-      aws_ssh_key_id: <%= ENV['AWS_SSH_KEY'] %>
+      aws_ssh_key_id: bootstrap
       instance_type: t2.micro 
+      availability_zone: a
       subnet_id: <%= ENV['SUBNET_ID'] %>
       security_group_ids: [ <%= ENV['SECURITY_GROUP_ID'] %> ]
       image_id: <%= ENV['AMI_ID'] %>
       tags: 
         Name: test-prime8base
     transport:
-      ssh_key: <%= ENV['PATH_TO_SSH_KEY'] %> 
+      ssh_key: <%= ENV['SSH_PRIVATE_KEY_FILE'] %> 
+      username: ubuntu
