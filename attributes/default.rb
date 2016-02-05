@@ -1,1 +1,1 @@
-default['meteor']['install_meteorite']=false
+# default attributes for the base node
