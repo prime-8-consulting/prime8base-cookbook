@@ -6,10 +6,10 @@ prime_packages = [
 	'git',
 	'vim',
 	'tmux',
-  'curl',
 	'jq',
 	'htop',
-  'graphicsmagick'
+  'graphicsmagick',
+  'curl'
 ]
 
 package prime_packages do
