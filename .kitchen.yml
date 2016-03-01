@@ -9,7 +9,7 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-    driver_config: 
+    transport: 
       username: ubuntu
  
 suites:
@@ -26,7 +26,6 @@ suites:
   - name: ubu-ec2
     run_list: 
       - recipe[prime8base::ubuntu]
-      - recipe[prime8base::foss_sec]
     driver:
       name: ec2
       region: <%= ENV['AWS_REGION'] %>
