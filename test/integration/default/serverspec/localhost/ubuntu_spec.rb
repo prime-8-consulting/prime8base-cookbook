@@ -11,7 +11,6 @@ describe 'prime8base::ubuntu' do
 		'tmux',
 		'jq',
 		'htop',
-		'curl',
 		'graphicsmagick'
 	]
 

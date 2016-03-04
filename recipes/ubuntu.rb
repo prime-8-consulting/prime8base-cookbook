@@ -6,14 +6,14 @@ prime_packages = [
 	'git',
 	'vim',
 	'tmux',
-	'jq',
 	'htop',
   'graphicsmagick',
-  'curl'
+	'jq'
 ]
 
 package prime_packages do
-  ignore_failure true
+  retries 3
+  retry_delay 10
 end
 
 
