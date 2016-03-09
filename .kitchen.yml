@@ -27,7 +27,7 @@ suites:
       - recipe[prime8base::foss_sec]
     driver:
       name: ec2
-      region: <%= ENV['AWS_REGION'] %>
+      region: us-west-2
       aws_ssh_key_id: bootstrap
       instance_type: t2.micro 
       availability_zone: a
