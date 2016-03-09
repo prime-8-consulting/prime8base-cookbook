@@ -14,6 +14,7 @@ prime_packages = [
 package prime_packages do
   retries 3
   retry_delay 10
+  ignore_failure true
 end
 
 
