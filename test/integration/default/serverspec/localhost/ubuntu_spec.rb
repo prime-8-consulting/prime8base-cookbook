@@ -9,7 +9,6 @@ describe 'prime8base::ubuntu' do
 		'git',
 		'vim',
 		'tmux',
-		'jq',
 		'htop',
 		'curl',
 		'graphicsmagick'
