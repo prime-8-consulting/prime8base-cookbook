@@ -7,8 +7,7 @@ prime_packages = [
   'wget',
   'curl',
 	'git',
-	'jq',
-	'htop',
+	'htop'
 ]
 
 package prime_packages
