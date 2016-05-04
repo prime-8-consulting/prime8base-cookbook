@@ -1,4 +1,4 @@
-# recipe to  = configure ubuntu
+# recipe to configure ubuntu
 # for prime 8 consulting dev
 
 prime_packages = [
@@ -7,14 +7,15 @@ prime_packages = [
   'wget',
   'curl',
 	'git',
-	'htop'
+	'htop',
+  'build-essential'
 ]
 
 package prime_packages
-
 
 package 'graphicsmagick' do
   options '--no-install-recommends'
   ignore_failure true
 end
+
 
