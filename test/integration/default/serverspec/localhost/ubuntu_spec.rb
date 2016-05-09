@@ -11,7 +11,8 @@ describe 'prime8base::ubuntu' do
 		'tmux',
 		'htop',
 		'curl',
-		'graphicsmagick'
+		'graphicsmagick',
+    'build-essential'
 	]
 
   prime_packages.each do |p|
