@@ -18,3 +18,7 @@ package 'graphicsmagick' do
   ignore_failure true
 end
 
+package 'ghostscript' do
+  options '--no-install-recommends'
+  ignore_failure true
+end
