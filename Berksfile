@@ -4,3 +4,4 @@ metadata
 
 cookbook 'samhain'
 cookbook 'chkrootkit'
+cookbook 'apt'

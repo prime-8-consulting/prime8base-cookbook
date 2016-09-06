@@ -8,20 +8,16 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-16.04
  
 suites:
-  - name: default
+  - name: base-docker
     run_list:
       - recipe[prime8base::default]
+      - recipe[prime8base::ubuntu]
     attributes:
 
-  - name: ubu-docker
-    run_list:
-     - recipe[prime8base::ubuntu]
-    attributes:
-
-  - name: ubu-ec2
+  - name: base-ec2
     run_list: 
       - recipe[prime8base::ubuntu]
       - recipe[prime8base::foss_sec]

@@ -11,3 +11,4 @@ supports 'windows'
 
 depends 'samhain'
 depends 'chkrootkit'
+depends 'apt'

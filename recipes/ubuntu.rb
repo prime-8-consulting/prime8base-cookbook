@@ -18,4 +18,6 @@ package 'graphicsmagick' do
   ignore_failure true
 end
 
+include_recipe 'apt::cacher-client'
+
 
