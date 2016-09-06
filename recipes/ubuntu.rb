@@ -1,6 +1,8 @@
 # recipe to configure ubuntu
 # for prime 8 consulting dev
 
+include_recipe 'apt::cacher-client'
+
 prime_packages = [
   'vim',
   'tmux',
@@ -18,6 +20,5 @@ package 'graphicsmagick' do
   ignore_failure true
 end
 
-include_recipe 'apt::cacher-client'
 
 
