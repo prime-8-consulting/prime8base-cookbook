@@ -19,6 +19,3 @@ package 'graphicsmagick' do
   options '--no-install-recommends'
   ignore_failure true
 end
-
-
-
