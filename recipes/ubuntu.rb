@@ -10,7 +10,8 @@ prime_packages = [
   'curl',
 	'git',
 	'htop',
-  'build-essential'
+  'build-essential',
+  'zsh'
 ]
 
 package prime_packages
