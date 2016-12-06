@@ -104,19 +104,15 @@ cloud8_dirs.each do |d|
   end
 end
 
-# this the filesystem where we do
-# development. It's set up semantically
-# in the pattern of the metarepository
-cloud8_devdirs = [
-  '/home/prime8/prime-8-dev',
-  '/home/prime8/prime-8-dev/dev',
-  '/home/prime8/prime-8-dev/ops'
-]
-
-cloud8_devdirs.each do |d|
-  directory d do
-    owner 'prime8'
-    group 'prime8'
-    mode '0755'
-  end
+# for the devbox, there's a second script
+# to propagate the model for the repos
+# we'll just set up the workspace here
+directory '/home/prime8/prime-8-dev' do
+  owner 'prime8'
+  group 'prime8'
+  mode '0755'
 end
+
+# add github to known hosts so we're not
+# prompted everytime we clone a repo
+ssh_known_hosts_entry 'github.com'
