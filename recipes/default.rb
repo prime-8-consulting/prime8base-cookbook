@@ -6,3 +6,14 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+prime_packages = [
+  'vim',
+  'tmux',
+  'wget',
+  'curl',
+	'git',
+	'htop',
+  'build-essential'
+]
+
+package prime_packages

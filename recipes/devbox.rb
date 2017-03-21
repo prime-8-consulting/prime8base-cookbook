@@ -64,8 +64,7 @@ gems = [
   'aws-sdk',
   'inifile',
   'chef-berks',
-  'ruby-graphviz',
-  'mongo'
+  'ruby-graphviz'
 ]
 
 gems.each do |g|
